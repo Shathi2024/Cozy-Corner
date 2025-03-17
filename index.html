@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Corner Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Cozy Corner</h1>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <button id="loginBtn" class="login-btn">Login</button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content login-modal">
+            <div class="modal-bg-overlay"></div>
+            <div class="modal-inner">
+                <span class="close">&times;</span>
+                <div class="login-header">
+                    <h2>Welcome Back</h2>
+                    <p>Sign in to your account</p>
+                </div>
+                <form id="loginForm" class="login-form">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-footer">
+                        <label class="remember-me">
+                            <input type="checkbox">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="cta-button login-submit">Login</button>
+                </form>
+                <p class="signup-link">Don't have an account? <a href="#" id="signupLink">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content login-modal">
+            <div class="modal-bg-overlay"></div>
+            <div class="modal-inner">
+                <span class="close">&times;</span>
+                <div class="login-header">
+                    <h2>Create Account</h2>
+                    <p>Join our coffee community</p>
+                </div>
+                <form id="signupForm" class="login-form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Confirm Password" required>
+                    </div>
+                    <button type="submit" class="cta-button login-submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Cozy Corner</h1>
+            <p>Where every cup tells a story</p>
+            <a href="#menu" class="cta-button">View Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-categories">
+            <button class="category-btn active" data-category="hot-coffee">Hot Coffee</button>
+            <button class="category-btn" data-category="cold-coffee">Cold Coffee</button>
+            <button class="category-btn" data-category="pastries">Pastries</button>
+        </div>
+        <div class="menu-grid">
+            <!-- Hot Coffee -->
+            <div class="menu-item" data-category="hot-coffee">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>Rich espresso with steamed milk foam</p>
+                <span class="price">৳495</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="hot-coffee">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Latte">
+                <h3>Cafe Latte</h3>
+                <p>Smooth espresso with steamed milk</p>
+                <span class="price">৳440</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="hot-coffee">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Pure, intense coffee experience</p>
+                <span class="price">৳330</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="hot-coffee">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd" alt="Americano">
+                <h3>Americano</h3>
+                <p>Espresso diluted with hot water</p>
+                <span class="price">৳385</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="hot-coffee">
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d" alt="Mocha">
+                <h3>Mocha</h3>
+                <p>Espresso with chocolate and steamed milk</p>
+                <span class="price">৳522</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Cold Coffee -->
+            <div class="menu-item" data-category="cold-coffee">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735" alt="Iced Latte">
+                <h3>Iced Latte</h3>
+                <p>Chilled espresso with cold milk and ice</p>
+                <span class="price">৳495</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="cold-coffee">
+                <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e" alt="Frappuccino">
+                <h3>Frappuccino</h3>
+                <p>Blended coffee with ice cream and whipped cream</p>
+                <span class="price">৳605</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="cold-coffee">
+                <img src="https://images.unsplash.com/photo-1594261956806-3ad03785c9b4" alt="Cold Brew">
+                <h3>Cold Brew</h3>
+                <p>Smooth, slow-steeped cold coffee</p>
+                <span class="price">৳467</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Pastries -->
+            <div class="menu-item" data-category="pastries">
+                <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812" alt="Croissant">
+                <h3>Butter Croissant</h3>
+                <p>Flaky, buttery French pastry</p>
+                <span class="price">৳357</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="pastries">
+                <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2" alt="Chocolate Muffin">
+                <h3>Chocolate Muffin</h3>
+                <p>Rich chocolate chip muffin</p>
+                <span class="price">৳385</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="pastries">
+                <img src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6" alt="Cheesecake">
+                <h3>New York Cheesecake</h3>
+                <p>Classic creamy cheesecake</p>
+                <span class="price">৳522</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-total">
+                <h3>Total: <span id="cartTotal">$0.00</span></h3>
+                <button id="checkoutBtn" class="cta-button">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>Our Story</h2>
+            <div class="founder-info">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7" alt="MD Shohanur Rahman" class="founder-image">
+                <div class="founder-details">
+                    <h3>AFRAN SHOHAN</h3>
+                    <p class="founder-title">Founder, CEO & Owner</p>
+                </div>
+            </div>
+            <p>Founded in 2025, Cozy Corner emerged from a simple dream of AFRAN SHOHAN, a former IT professional turned coffee artisan. His journey into the world of coffee began during his travels across Ethiopia and Colombia, where he discovered the magic of perfectly roasted beans and the warmth of local coffee communities. This inspiration led him to create not just a coffee shop, but a cultural hub in the heart of Dhaka.</p>
+            
+            <div class="about-features">
+                <div class="feature">
+                    <h3><i class="fas fa-coffee"></i> Unique Coffee Experience</h3>
+                    <p>Under Shohan's guidance, we proudly offer our signature "Dhaka Sunrise Blend" – a unique fusion of Ethiopian Yirgacheffe and Colombian Supremo beans, roasted daily in small batches. Our cold brew is aged in oak barrels, giving it a distinct, smooth flavor that you won't find anywhere else in Bangladesh.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3><i class="fas fa-users"></i> Our Community</h3>
+                    <p>From students finding inspiration over our Study Special lattes, to entrepreneurs closing deals over our signature Mocha, to artists sketching in our cozy corners – we've become a second home to Dhaka's diverse community. Every weekend, we host local musicians and poetry readings, making us more than just a coffee shop – we're a cultural hub.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3><i class="fas fa-leaf"></i> Sustainability Promise</h3>
+                    <p>We source our beans directly from small-scale farmers in Ethiopia and Colombia, ensuring fair prices and sustainable practices. Our eco-friendly packaging and waste reduction initiatives have made us Gulshan's first zero-waste coffee shop, inspiring others to follow suit.</p>
+                </div>
+            </div>
+            
+            <div class="testimonials">
+                <h3>What Our Customers Say</h3>
+                <div class="testimonial-grid">
+                    <div class="testimonial">
+                        <p>"The Dhaka Sunrise Blend is my morning ritual. I've tried coffee all over the city, but nothing compares to Cozy Corner's unique roast."</p>
+                        <span>- Sarah Ahmed, Local Artist</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"As a student, I spend hours here. The staff knows my usual order and the atmosphere is perfect for studying. It's my second home!"</p>
+                        <span>- Rafiq Hassan, University Student</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Their commitment to sustainability and community support sets them apart. Plus, their oak-aged cold brew is simply unmatched."</p>
+                        <span>- Mira Rahman, Environmental Activist</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coffee Shop Gallery -->
+            <div class="coffee-shop-gallery">
+                <h3>Our Coffee Shop</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24" alt="Coffee Shop Interior" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <p>Main Seating Area</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56" alt="Coffee Bar" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <p>Coffee Bar</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8" alt="Coffee Making" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <p>Coffee Making</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31" alt="Outdoor Area" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <p>Outdoor Area</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24" alt="Coffee Shop Interior">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Visit Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i>Gulshan-2 Circle,Dhaka</p>
+                <p><i class="fas fa-phone"></i>01324354741</p>
+                <p><i class="fas fa-envelope"></i> afranshohan9842@gmail.com</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100034492127044" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/shohan1642" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://x.com/MDShoha32016470" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://wa.me/01324354741" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+            <p>&copy; 2025 Cozy Corner Coffee Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
