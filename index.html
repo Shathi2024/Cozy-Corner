@@ -46,12 +46,12 @@
                         <i class="fas fa-lock"></i>
                         <input type="password" placeholder="Password" required>
                     </div>
-                    <div class="form-footer">
-                        <label class="remember-me">
-                            <input type="checkbox">
+                    <div class="form-footer" style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+                        <label class="remember-me" style="display: flex; align-items: center; margin-bottom: 0;">
+                            <input type="checkbox" style="margin-right: 5px;">
                             <span>Remember me</span>
                         </label>
-                        <a href="#" class="forgot-password">Forgot Password?</a>
+                        <a href="#" class="forgot-password" style="white-space: nowrap;">Forgot Password?</a>
                     </div>
                     <button type="submit" class="cta-button login-submit">Login</button>
                 </form>
@@ -73,20 +73,21 @@
                 <form id="signupForm" class="login-form">
                     <div class="input-group">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Full Name" required>
+                        <input type="text" placeholder="Full Name" id="signupName" required>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email" required>
+                        <input type="email" placeholder="Email" id="signupEmail" required>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" placeholder="Password" id="signupPassword" required>
                     </div>
                     <div class="input-group">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Confirm Password" required>
+                        <input type="password" placeholder="Confirm Password" id="signupConfirmPassword" required>
                     </div>
+                    <!-- Profile picture upload moved to profile section after login -->
                     <button type="submit" class="cta-button login-submit">Sign Up</button>
                 </form>
             </div>
@@ -108,7 +109,10 @@
         <div class="menu-categories">
             <button class="category-btn active" data-category="hot-coffee">Hot Coffee</button>
             <button class="category-btn" data-category="cold-coffee">Cold Coffee</button>
-            <button class="category-btn" data-category="pastries">Pastries</button>
+            <button class="category-btn" data-category="pastries">Pastries & Desserts</button>
+            <button class="category-btn" data-category="sandwiches">Sandwiches & Wraps</button>
+            <button class="category-btn" data-category="breakfast">Breakfast Items</button>
+            <button class="category-btn" data-category="beverages">Other Beverages</button>
         </div>
         <div class="menu-grid">
             <!-- Hot Coffee -->
@@ -172,6 +176,42 @@
                     <button class="order-btn">Order Now</button>
                 </div>
             </div>
+            <div class="menu-item" data-category="hot-coffee">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd" alt="Macchiato">
+                <h3>Macchiato</h3>
+                <p>Espresso with a dollop of steamed milk</p>
+                <span class="price">৳385</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="hot-coffee">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" alt="Flat White">
+                <h3>Flat White</h3>
+                <p>Espresso with velvety microfoam</p>
+                <span class="price">৳467</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="hot-coffee">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Turkish Coffee">
+                <h3>Turkish Coffee</h3>
+                <p>Traditional unfiltered coffee with cardamom</p>
+                <span class="price">৳440</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
 
             <!-- Cold Coffee -->
             <div class="menu-item" data-category="cold-coffee">
@@ -203,6 +243,42 @@
                 <h3>Cold Brew</h3>
                 <p>Smooth, slow-steeped cold coffee</p>
                 <span class="price">৳467</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="cold-coffee">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735" alt="Iced Americano">
+                <h3>Iced Americano</h3>
+                <p>Espresso over ice with cold water</p>
+                <span class="price">৳385</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="cold-coffee">
+                <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e" alt="Iced Mocha">
+                <h3>Iced Mocha</h3>
+                <p>Chilled mocha with whipped cream</p>
+                <span class="price">৳550</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="cold-coffee">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Nitro Cold Brew">
+                <h3>Nitro Cold Brew</h3>
+                <p>Cold brew infused with nitrogen for creamy texture</p>
+                <span class="price">৳605</span>
                 <div class="order-controls">
                     <button class="quantity-btn minus">-</button>
                     <span class="quantity">0</span>
@@ -248,6 +324,168 @@
                     <button class="order-btn">Order Now</button>
                 </div>
             </div>
+            <div class="menu-item" data-category="pastries">
+                <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812" alt="Pain au Chocolat">
+                <h3>Pain au Chocolat</h3>
+                <p>Flaky croissant with dark chocolate</p>
+                <span class="price">৳440</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="pastries">
+                <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2" alt="Tiramisu">
+                <h3>Tiramisu</h3>
+                <p>Italian coffee-flavored dessert</p>
+                <span class="price">৳605</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="pastries">
+                <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812" alt="Chocolate Eclair">
+                <h3>Chocolate Eclair</h3>
+                <p>Choux pastry filled with cream and chocolate</p>
+                <span class="price">৳467</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Sandwiches & Wraps -->
+            <div class="menu-item" data-category="sandwiches">
+                <img src="image/Grilled Chicken Sandwich.jpg" alt="Grilled Chicken Sandwich">
+                <h3>Grilled Chicken Sandwich</h3>
+                <p>Grilled chicken breast with lettuce, tomato, and mayo</p>
+                <span class="price">৳605</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="sandwiches">
+                <img src="image/Veggie Wrap.jpg" alt="Veggie Wrap">
+                <h3>Veggie Wrap</h3>
+                <p>Fresh vegetables with hummus in whole wheat tortilla</p>
+                <span class="price">৳467</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="sandwiches">
+                <img src="image/Tuna Salad Sandwich.jpg" alt="Tuna Salad Sandwich">
+                <h3>Tuna Salad Sandwich</h3>
+                <p>Fresh tuna with celery and light mayo on whole grain bread</p>
+                <span class="price">৳550</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Breakfast Items -->
+            <div class="menu-item" data-category="breakfast">
+                <img src="image/Avocado Toast.jpg" alt="Avocado Toast">
+                <h3>Avocado Toast</h3>
+                <p>Sourdough bread with smashed avocado and poached eggs</p>
+                <span class="price">৳605</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="breakfast">
+                <img src="https://images.unsplash.com/photo-1504674900240-9c9c0c0c0c0c" alt="Oatmeal Bowl">
+                <h3>Oatmeal Bowl</h3>
+                <p>Steel-cut oats with berries, nuts, and honey</p>
+                <span class="price">৳440</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="breakfast">
+                <img src="https://images.unsplash.com/photo-1504674900240-9c9c0c0c0c0c" alt="Eggs Benedict">
+                <h3>Eggs Benedict</h3>
+                <p>Poached eggs on English muffin with hollandaise sauce</p>
+                <span class="price">৳715</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+
+            <!-- Other Beverages -->
+            <div class="menu-item" data-category="beverages">
+                <img src="https://images.unsplash.com/photo-1504674900240-9c9c0c0c0c0c" alt="Hot Chocolate">
+                <h3>Hot Chocolate</h3>
+                <p>Rich Belgian chocolate with whipped cream</p>
+                <span class="price">৳467</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="beverages">
+                <img src="https://images.unsplash.com/photo-1504674900240-9c9c0c0c0c0c" alt="Chai Latte">
+                <h3>Chai Latte</h3>
+                <p>Spiced Indian tea with steamed milk</p>
+                <span class="price">৳385</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="beverages">
+                <img src="https://images.unsplash.com/photo-1504674900240-9c9c0c0c0c0c" alt="Green Tea">
+                <h3>Green Tea</h3>
+                <p>Premium Japanese sencha green tea</p>
+                <span class="price">৳275</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="beverages">
+                <img src="https://images.unsplash.com/photo-1504674900240-9c9c0c0c0c0c" alt="Fresh Orange Juice">
+                <h3>Fresh Orange Juice</h3>
+                <p>Freshly squeezed orange juice</p>
+                <span class="price">৳330</span>
+                <div class="order-controls">
+                    <button class="quantity-btn minus">-</button>
+                    <span class="quantity">0</span>
+                    <button class="quantity-btn plus">+</button>
+                    <button class="order-btn">Order Now</button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -271,7 +509,7 @@
         <div class="about-content">
             <h2>Our Story</h2>
             <div class="founder-info">
-                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7" alt="MD Shohanur Rahman" class="founder-image">
+                <img src="image/AfranShohan.jpg" alt="MD Shohanur Rahman" class="founder-image">
                 <div class="founder-details">
                     <h3>AFRAN SHOHAN</h3>
                     <p class="founder-title">Founder, CEO & Owner</p>
@@ -346,7 +584,7 @@
             </div>
         </div>
         <div class="about-image">
-            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24" alt="Coffee Shop Interior">
+           
         </div>
     </section>
 
